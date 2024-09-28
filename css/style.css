@@ -147,9 +147,13 @@ nav a:focus {
 
 /* Step 5: Write selector/rule property to add the background image to the 
 first div in the grid  and place it in the grid. */
-.container div:first-child {
-  background-image: url('images/header.jpg');
-  grid-column: 1 / span 5;
+.container > :first-child {
+  grid-column: 1 / -1;
+  background-image: url(../images/header.jpg); /* "../" means go up one level -- so it goes from css folder up to project then access images*/
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
 }
 
 
